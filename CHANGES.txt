@@ -1,0 +1,62 @@
+2013_03-20 : 1.8.1
+	haxe2 compat
+	hxcpp compat
+	poll enabling
+
+2013_02-24 : 1.8
+	haxe3 changes
+
+2012-04-30 : 1.7
+	fixed tora.Api.cron timing (was always 1s)
+	cleanup inactive sockets after big timeout (~14 hours)
+	bigger timeout while loading multipart data from mod_tora
+	added "memory" command to dump detailed module memory usage (require neko 1.8.3)
+
+2011-12-12 : 1.6.2
+	added tora.Api.getURL
+	added -debugPort (allocate a separate client queue)
+	use setFastSend to send response faster
+
+2011-09-05 : 1.6.1
+	allowed different modules to listen/notify on the same queue
+
+2011-07-14 : 1.6
+	removed Queue.listen, added Queue.addHandler()
+	make sure that queue events are synchronized and allow code hotswap
+
+2011-05-03 : 1.5
+	added thread infos access with current stack
+
+2010-12-22 : 1.4
+	added tora.Api.setCron
+	added tora.Api.getExports
+	removed tora.Api.call
+
+2010-02-19 : 1.3
+	moret tora.Persist support
+	added tora.Share.commitAll
+	allow to send data on listening connection
+	added share deadlock detection
+	fixed issues with tcp out buffer full in queues
+
+2010-01-05 : 1.2
+	need to specify a host in -unsafe
+	fixed load config
+	changed queue notification implementation
+	automaticaly unlock Share after request
+	added tora.Persist, allow Share + Persist behavior
+	added tora.Api.call, tora.Api.unsafeRequest
+
+2009-07-27 : 1.1
+	distribute on haxelib
+	added tora package + api
+	added Share api
+	added Queue api
+	remove cleanupLoop
+	changed commandline format
+	added -config to parse httpd.conf virtual hosts
+	added -unsafe to allow external direct connections
+	send crossdomain xml if requested by Flash Player
+
+2008-09-23 : 1.0
+	mod_tora included in Neko 1.8.0
